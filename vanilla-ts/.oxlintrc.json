@@ -6,6 +6,7 @@
         "argsIgnorePattern": "^_",
         "varsIgnorePattern": "^(Array|[\\w]*(?:Interface|Type))$"
       }
-    ]
+    ],
+    "unicorn/no-new-array": "off"
   }
 }
