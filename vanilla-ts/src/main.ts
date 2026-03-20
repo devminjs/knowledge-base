@@ -1,4 +1,4 @@
-import "./main.css";
+import "./style/main.css";
 
 async function loadScript() {
   const [loadScribble] = Object.values(import.meta.glob("./scribble.ts"));
