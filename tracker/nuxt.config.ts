@@ -11,6 +11,10 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  vue: {
+    propsDestructure: true
+  },
+
   routeRules: {
     '/': { prerender: true }
   },
