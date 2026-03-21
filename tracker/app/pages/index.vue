@@ -15,8 +15,8 @@
         target: '_blank',
         icon: 'i-simple-icons-github',
         size: 'xl',
-        color: 'neutral',
-        variant: 'subtle'
+        color: 'secondary',
+        variant: 'outline'
       }]"
     />
 
@@ -67,7 +67,7 @@
           to: 'https://github.com/nuxt-ui-templates/starter',
           target: '_blank',
           icon: 'i-simple-icons-github',
-          color: 'neutral',
+          color: 'secondary',
           variant: 'outline'
         }]"
       />
