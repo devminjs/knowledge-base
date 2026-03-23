@@ -14,8 +14,8 @@ function mountView() {
   const app = document.getElementById("app");
   if (app) {
     app.innerHTML = `    
-    <div class="flex flex-col items-center justify-center h-screen">
-      <h1 class="text-2xl">Learn js coding questions!</h1>
+    <div class="p-4">
+      <h1 class="text-sm">Learn js coding questions!</h1>
     </div>
     `;
   }
