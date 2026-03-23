@@ -1,2 +1,63 @@
 /* src/index.css */
 @import "tailwindcss";
+
+/* Custom Tailwind variant: enables dark: utilities targeting .dark class */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Light mode design tokens - used as CSS variables throughout the app */
+:root {
+  --color-background: #ffffff;
+  --color-foreground: #0a0a0a;
+  --color-muted: #737373;
+  --color-muted-foreground: #a3a3a3;
+  --color-border: #e5e5e5;
+  --color-card: #f5f5f5;
+  --color-primary: #ea580c;
+  --color-primary-foreground: #ffffff;
+  --color-accent: #fff7ed;
+  --color-accent-foreground: #9a3412;
+  --color-destructive: #dc2626;
+  --color-destructive-foreground: #ffffff;
+}
+
+/* Dark mode design tokens - overrides light mode when system prefers dark */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #0a0a0a;
+    --color-foreground: #fafafa;
+    --color-muted: #a3a3a3;
+    --color-muted-foreground: #737373;
+    --color-border: #262626;
+    --color-card: #171717;
+    --color-primary: #f97316;
+    --color-primary-foreground: #ffffff;
+    --color-accent: #431407;
+    --color-accent-foreground: #fdba74;
+    --color-destructive: #ef4444;
+    --color-destructive-foreground: #ffffff;
+  }
+}
+
+/* Expose CSS variables as Tailwind utilities
+   This converts --color-* to usable Tailwind classes like:
+   bg-color-background, text-color-primary, border-color-border, etc.
+   Makes design tokens available as regular Tailwind utilities */
+@theme inline {
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-foreground);
+  --color-muted: var(--color-muted);
+  --color-muted-foreground: var(--color-muted-foreground);
+  --color-border: var(--color-border);
+  --color-card: var(--color-card);
+  --color-primary: var(--color-primary);
+  --color-primary-foreground: var(--color-primary-foreground);
+  --color-accent: var(--color-accent);
+  --color-accent-foreground: var(--color-accent-foreground);
+  --color-destructive: var(--color-destructive);
+  --color-destructive-foreground: var(--color-destructive-foreground);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
