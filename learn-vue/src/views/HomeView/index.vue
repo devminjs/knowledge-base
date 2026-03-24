@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import Button from '~/components/ui/Button.vue'
 
 // Data binding example
 const msg = 'Hello from HomeView!'
@@ -67,9 +68,7 @@ const onSubmit = () => {
       <form @submit.prevent="onSubmit" class="flex gap-2 mt-2">
         <input v-model="formInput" type="text" placeholder="Enter your name"
           class="px-3 py-1 border border-gray-300 rounded" />
-        <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-          Submit
-        </button>
+        <Button label="Submit" type="submit" />
       </form>
 
       <div v-if="submittedValue" class="mt-4 p-2 text-sm bg-green-100 border border-green-400 rounded">

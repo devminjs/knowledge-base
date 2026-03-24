@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import BasicView from '~/views/HomeView.vue'
+import BasicView from '~/views/HomeView/index.vue'
+import ReactivityView from '~/views/ReactivityView/index.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -8,6 +9,11 @@ const router = createRouter({
     {
       path: '/',
       component: BasicView,
+    },
+
+    {
+      path: '/reactivity',
+      component: ReactivityView,
     },
   ],
 })
